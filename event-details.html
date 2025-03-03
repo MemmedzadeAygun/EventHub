@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="az">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/event-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css"
+        integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css"
+        integrity="sha512-sMXtMNL1zRzolHYKEujM2AqCLUR9F2C4/05cdbxjjLSRvMQIciEPCQZo++nk7go3BtSuK9kfa/s+a4f4i5pLkw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Event Details</title>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="head">
+            <div class="logo">
+                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+            </div>
+            <div class="user-details">
+                <div class="admin-button"></div>
+                <div class="dark-mood">
+                    <li class="mode">
+                        <a href="#">
+                            <i class="fa-regular fa-moon"></i>
+                            <!-- <span class="link-name">Dark Mode</span> -->
+                        </a>
+    
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="profile">
+                    <img class="profile-img"
+                        src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                        onclick="toggleMenu()" alt="">
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                                    alt="">
+                                <h3 id="userAccount">Jhon Wick</h3>
+                            </div>
+                            <hr>
+
+                            <a href="user.html" class="sub-menu-link">
+                                My profile
+                            </a>
+                            <a href="login.html" id="sign-out-text" class="sub-menu-link">
+                                Sign out <i id="logOut" class="fa-solid fa-right-from-bracket hidden"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+
+    <main>
+        <div class="background"><a href="index.html">Home Page</a></div>
+        <div class="sub-main">
+            <div class="details">
+                <div class="event-detail1">
+                    <h2 id="eventTitle"></h2>
+                    <p><i class="fa-solid fa-circle-dot"></i><span id="eventCategory"></span></p>
+                    <p><i class="fa-solid fa-location-dot"></i><span id="eventType"></span></p>
+                    <div class="event-img">
+                        <img id="eventImage" src="" alt="" class="img-fluid" />
+                    </div>
+                    <h3>About this event</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vel optio tempore recusandae
+                        dicta et nulla hic, blanditiis nemo? Numquam quod voluptas, perspiciatis esse aperiam voluptates
+                        magni impedit reprehenderit dicta! Suscipit quos labore beatae quaerat! Quae, iusto debitis
+                        ipsam placeat nulla incidunt repudiandae. Tempora animi, voluptates enim culpa numquam quis,
+                        magnam perferendis porro nisi possimus quaerat odit in optio? Vel nobis odio, facilis et labore
+                        praesentium dolorem, totam sit quae expedita accusantium iusto nulla deserunt odit aspernatur
+                        aliquam saepe. <br> Corporis autem exercitationem repellat laboriosam pariatur quidem nihil,
+                        consequuntur maiores necessitatibus quam, molestiae libero soluta cumque vero sint facere,
+                        explicabo assumenda animi repellendus ab excepturi eligendi at. Impedit magnam aspernatur, quos
+                        nam assumenda blanditiis voluptatem vero architecto mollitia officiis aut voluptas debitis
+                        laudantium numquam totam, hic fuga soluta officia consequuntur, delectus dolore omnis. Libero
+                        placeat perspiciatis aut, ipsum ducimus ex, sit mollitia incidunt ratione laboriosam repellat!
+                        Perferendis dolorum facilis eveniet ipsa.</p>
+                </div>
+                <div class="event-detail2">
+                    <h3>Event details</h3>
+                    <hr>
+                    <div id="countdown" class="countdown">
+                        <div class="time">
+                            <h2 id="days"></h2>
+                            <span>Days</span>
+                        </div>
+
+                        <div class="time">
+                            <h2 id="hours"></h2>
+                            <span>Hours</span>
+                        </div>
+
+                        <div class="time">
+                            <h2 id="minutes"></h2>
+                            <span>Minutes</span>
+                        </div>
+
+                        <div class="time">
+                            <h2 id="seconds"></h2>
+                            <span>Seconds</span>
+                        </div>
+                    </div>
+                    <div class="about">
+                        <div class="user-detail">
+                            <h4><i class="fa-solid fa-user"></i>Name and Surname</h4>
+                            <div class="name-surname">
+                                <span id="user-name"></span>
+                                <span id="user-surname"></span>
+                            </div>
+                        </div>
+                        <div class="event-date">
+                            <h4><i class="fa-regular fa-calendar"></i>Date and Time</h4>
+                            <span id="eventDate"></span>
+                        </div>
+                    </div>
+                    <h3>Select Tickets</h3>
+                    <hr>
+                    <div class="ticket-details">
+                        <p id="price"></p>
+                        <div class="ticket-count">
+                            <div class="minus"><span>-</span></div>
+                            <p class="count">1</p>
+                            <div class="plus"><span>+</span></div>
+                        </div>
+
+                    </div>
+                    <button id="bookNow">Book Now</button>
+                </div>
+            </div>
+            <div class="container-fluid my-5">
+                <!-- <h1 class="text-center mb-3">Owl Carousel</h1> -->
+                <div class="row mt-5">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="./img/img-1.jpg" alt="">
+                                <div class="card-body">
+                                    <h4>Global Events Expo 2025</h4>
+                                    <p><b>$10</b></p>
+                                    <h3><i class="fa-solid fa-video"></i>online</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="./img/img-2.jpg" alt="">
+                                <div class="card-body">
+                                    <h4>International Art Fair</h4>
+                                    <p><b>$20</b></p>
+                                    <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="./img/img-3.jpg" alt="">
+                                <div class="card-body">
+                                    <h4>Entrepreneurs Summit 2025</h4>
+                                    <p><b>$25</b></p>
+                                    <h3><i class="fa-solid fa-video"></i>online</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="./img/img-4.jpg" alt="">
+                                <div class="card-body">
+                                    <h4>World Music & Theater Festival</h4>
+                                    <p><b>$30</b></p>
+                                    <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item mb-4">
+                            <div class="card border-0 shadow">
+                                <img src="./img/img-5.jpg" alt="">
+                                <div class="card-body">
+                                    <h4>International Film Awards Night</h4>
+                                    <p><b>$10</b></p>
+                                    <h3><i class="fa-solid fa-video"></i>online</h3>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="sub-footer">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/event-detail.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"
+        integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+        $('.owl-carousel').owlCarousel({
+            loop: true,
+            margin: 10,
+            nav: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                600: {
+                    items: 2
+                },
+                768: {
+                    items: 3
+                },
+                1000: {
+                    items: 4
+                }
+            }
+        });
+    </script>
+
+</body>
+
+</html>

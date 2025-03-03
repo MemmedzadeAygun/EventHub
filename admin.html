@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/admin.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Admin Dashboard Page</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-name">
+            <div class="logo-image">
+                <img src="./img/logo.jpg" alt="logo">
+            </div>
+            <span class="logo_name">Z-ticket</span>
+        </div>
+
+        <div class="menu-items">
+            <ul class="nav-links">
+                <li><a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="index.html">
+                        <i class="fa-solid fa-calendar-days"></i>
+                        <span class="link-name">Event Page</span>
+                    </a></li>
+                <li><a href="create-event.html">
+                        <i class="fa-solid fa-location-dot"></i>
+                        <span class="link-name">Create Event</span>
+                    </a></li>
+                <!-- <li><a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li>
+                <li><a href="#">
+                        <i class="fa-solid fa-house"></i>
+                        <span class="link-name">Dashboard</span>
+                    </a></li> -->
+            </ul>
+            <ul class="logOut">
+                <li>
+                    <a href="#">
+                        <i id="logOut" class="fa-solid fa-right-from-bracket"></i>
+                        <span class="link-name">Logout</span>
+                    </a>
+                </li>
+
+                <li class="mode">
+                    <a href="#">
+                        <i class="fa-regular fa-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+
+                    <div class="mode-toggle">
+                        <span class="switch"></span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="dashboard">
+        <div class="top">
+            <i class="fa-solid fa-bars sidebar-toggle"></i>
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search here...">
+            </div>
+
+            <img src="img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png" alt="">
+        </div>
+
+        <div class="dash-content">
+            <div class="overview">
+                <div class="title">
+                    <i class="fa-solid fa-gauge-simple-high"></i>
+                    <span class="text">Dashboard</span>
+                </div>
+
+                <div class="boxes">
+                    <div class="box box1">
+                        <i class="fa-solid fa-money-bill"></i>
+                        <span class="text">Total Amount</span>
+                        <span class="number">$1200</span>
+                    </div>
+                    <div class="box box2">
+                        <i class="fa-solid fa-box"></i>
+                        <span class="text">Orders</span>
+                        <span class="number">6</span>
+                    </div>
+                    <div class="box box3">
+                        <i class="fa-solid fa-ticket"></i>
+                        <span class="text">Ticket Sales</span>
+                        <span class="number">10</span>
+                    </div>
+                </div>
+            </div>
+            <div class="activity">
+                <div class="title">
+                    <i class="fa-solid fa-clock"></i>
+                    <span class="text">Customers</span>
+                </div>
+
+                <div class="activity-data">
+                    <div class="data names">
+                        <div class="data-title">Name</div>
+                        <div class="data-list">Aygun</div>
+                        <div class="data-list">Aygun</div>
+                        <div class="data-list">Aygun</div>
+                        <div class="data-list">Aygun</div>
+                    </div>
+                    <div class="data surname">
+                        <div class="data-title">Surname</div>
+                        <div class="data-list">Memmedzade</div>
+                        <div class="data-list">Memmedzade</div>
+                        <div class="data-list">Memmedzade</div>
+                        <div class="data-list">Memmedzade</div>
+                    </div>
+                    <div class="data email">
+                        <div class="data-title">Email</div>
+                        <div class="data-list">amemmedzade@gmail.com</div>
+                        <div class="data-list">amemmedzade@gmail.com</div>
+                        <div class="data-list">amemmedzade@gmail.com</div>
+                        <div class="data-list">amemmedzade@gmail.com</div>
+                    </div>
+                    <div class="data address">
+                        <div class="data-title">Address</div>
+                        <div class="data-list">Ehmed Recebli</div>
+                        <div class="data-list">Ehmed Recebli</div>
+                        <div class="data-list">Ehmed Recebli</div>
+                        <div class="data-list">Ehmed Recebli</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="./js/admin.js"></script>
+</body>
+
+</html>

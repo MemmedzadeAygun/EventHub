@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/order-confirm.css">
+    <title>Order-Confirm</title>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+<body>
+    <header>
+        <div class="head">
+            <div class="logo">
+                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+            </div>
+            <div class="user-details">
+                <div class="admin-button"></div>
+                <div class="dark-mood">
+                    <li class="mode">
+                        <a href="#">
+                            <i class="fa-regular fa-moon"></i>
+                        </a>
+    
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="profile">
+                    <img class="profile-img"
+                        src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                        onclick="toggleMenu()" alt="">
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                                    alt="">
+                                <h3 id="userAccount">Jhon Wick</h3>
+                            </div>
+                            <hr>
+
+                            <a href="user.html" class="sub-menu-link">
+                                My profile
+                            </a>
+                            <a href="login.html" id="sign-out-text" class="sub-menu-link">
+                                Sign out <i id="logOut" class="fa-solid fa-right-from-bracket hidden"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="background">
+            <a href="event-details.html">Event Details</a>
+        </div>
+        <div class="sub-main">
+            <h1>Order Confirmation</h1>
+            <hr>
+            <div class="forms">
+                <div class="confirm-form">
+                    <h4>Details</h4>
+                    <hr>
+                    <form>
+                        <div class="input-detail">
+                            <div class="firstname">
+                                <label for="name">FirstName*</label> <br>
+                                <input type="text" placeholder="FirstName">
+                            </div>
+                            <div class="lastname">
+                                <label for="surname">LastName*</label> <br>
+                                <input type="text" placeholder="LastName"> <br>
+                            </div>
+                        </div>
+                        <div class="input-detail">
+                            <div class="email">
+                                <label for="email">Email*</label> <br>
+                                <input type="email" placeholder="Email">
+                            </div>
+                            <div class="address">
+                                <label for="address">Address*</label> <br>
+                                <input type="text" placeholder="Address"> <br>
+                            </div>
+                        </div>
+                        <div class="input-detail">
+                            <div class="country">
+                                <label for="country">Country*</label> <br>
+                                <input type="text" placeholder="Country">
+                            </div>
+                            <div class="state">
+                                <label for="state">State*</label> <br>
+                                <input type="text" placeholder="State"> <br>
+                            </div>
+                        </div>
+                       <div class="input-detail">
+                        <div class="city">
+                            <label for="city">City*</label> <br>
+                            <input type="text" placeholder="City">
+                        </div>
+                        <div class="zip-code">
+                            <label for="zip-code">Zip Code*</label> <br>
+                            <input type="text" placeholder="Zip Code">
+                        </div>
+                       </div>
+                    </form>
+                </div>
+                <div class="bank-account">
+                    <h4>Card Information</h4>
+                    <hr>
+                    <form action="">
+                        <div class="card-number">
+                            <label for="">Card Number*</label> <br>
+                            <input class="card" type="text">
+                        </div>
+                        <div class="input-detail2">
+                            <div class="expiry-date">
+                                <label for="">Expiry Date</label> <br>
+                                <input class="card-detail" type="text">
+                            </div>
+                            <div class="cvv">
+                                <label for="">CVV</label> <br>
+                                <input class="card-detail" type="text">
+                            </div> 
+                        </div>
+                        <button class="confirm">Confirm and Pay</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="sub-footer">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./js/order-confirm.js"></script>
+</body>
+</html>

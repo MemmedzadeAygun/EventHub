@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./style.css">
+    <title>Events</title>
+</head>
+<style>
+    .hidden {
+        display: none;
+    }
+</style>
+
+<body>
+
+    <header>
+        <div class="head">
+            <div class="logo">
+                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+            </div>
+            <div class="user-details">
+                <div class="admin-button"></div>
+                <div class="dark-mood">
+                    <li class="mode">
+                        <a href="#">
+                            <i class="fa-regular fa-moon"></i>
+                            <!-- <span class="link-name">Dark Mode</span> -->
+                        </a>
+    
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="profile">
+                    <img class="profile-img"
+                        src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                        onclick="toggleMenu()" alt="">
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                                    alt="">
+                                <h3 id="userAccount">Jhon Wick</h3>
+                            </div>
+                            <hr>
+
+                            <a href="user.html" class="sub-menu-link">
+                                My profile
+                            </a>
+                            <a href="login.html" id="sign-out-text" class="sub-menu-link">
+                                Sign out <i id="logOut" class="fa-solid fa-right-from-bracket hidden"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="part1">
+            <div class="sub-part1">
+                <select name="" id="eventType">
+                    <option value="browse all">Browse All</option>
+                    <option value="online">Online Events</option>
+                    <option value="vanue">Vanue Events</option>
+                </select>
+                <select name="" id="categoryFilter">
+                    <option value="All">All</option>
+                    <option value="Arts">Arts</option>
+                    <option value="Business">Business</option>
+                    <option value="Sports and Business">Sports and Business</option>
+                    <option value="Music and Theaters">Music and Theaters</option>
+                    <option value="Hobbies and Interest">Hobbies and Interest</option>
+                    <option value="Science and Technology">Science and Technology</option>
+                    <option value="Film and Entertainment">Film and Entertainment</option>
+                    <option value="Fashion and Beauty">Fashion and Beauty</option>
+                    <option value="Community and Culture">Community and Culture</option>
+                    <option value="Family and Friends">Family and Friends</option>
+                </select>
+                <button class="btn1" id="findBtn">Find</button>
+            </div>
+        </div>
+
+        <div class="categories">
+            <div class="category" data-category="All">
+                <p><b>All</b></p>
+            </div>
+            <div class="category" data-category="Arts">
+                <p><b>Arts</b></p>
+            </div>
+            <div class="category" data-category="Business">
+                <p><b>Business</b></p>
+            </div>
+            <div class="category" data-category="Sports">
+                <p><b>Sports</b></p>
+            </div>
+            <div class="category" data-category="Music and Theaters">
+                <p><b>Music and Theaters</b></p>
+            </div>
+            <div class="category" data-category="Hobbies and Interest">
+                <p><b>Hobbies and Interest</b></p>
+            </div>
+            <div class="category" data-category="Science and Technology">
+                <p><b>Science and Technology</b></p>
+            </div>
+            <div class="category" data-category="Film and Entertainment">
+                <p><b>Film and Entertainment</b></p>
+            </div>
+            <div class="category" data-category="Fashion and Beauty">
+                <p><b>Fashion and Beauty</b></p>
+            </div>
+            <div class="category" data-category="Community and Culture">
+                <p><b>Community and Culture</b></p>
+            </div>
+            <div class="category" data-category="Family and Friends">
+                <p><b>Family and Friends</b></p>
+            </div>
+        </div>
+        <div class="cards" id="cards">
+            <div class="card" data-category="Arts" data-event-type="online">
+                <div class="card-img">
+                    <img src="./img/img-1.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>Global Events Expo 2025</b></h3>
+                    <p>$100</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+            <div class="card" data-category="Business" data-event-type="vanue">
+                <div class="card-img">
+                    <img src="./img/img-2.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>International Art Fair</b></h3>
+                    <p>$10</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+            <div class="card" data-category="Sports" data-event-type="online">
+                <div class="card-img">
+                    <img src="./img/img-3.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>Entrepreneurs Summit 2025</b></h3>
+                    <p>$50</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+            <div class="card" data-category="Music and Theaters" data-event-type="vanue">
+                <div class="card-img">
+                    <img src="./img/img-4.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>World Music & Theater Festival</b></h3>
+                    <p>$15</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+            <div class="card" data-category="Hobbies and Interest" data-event-type="online">
+                <div class="card-img">
+                    <img src="./img/img-5.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>Creative Hobbies Fair</b></h3>
+                    <p>$200</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+            <div class="card" data-category="Science and Technology" data-event-type="vanue">
+                <div class="card-img">
+                    <img src="./img/img-6.jpg" alt="">
+                </div>
+                <div class="card-content">
+                    <h3><b>International Film Awards Night</b></h3>
+                    <p>$100</p>
+                    <span class="date">25 February 2025 18:00</span>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="sub-footer">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,37 @@
+.nav-links{
+    padding-left: 0;
+}
+.menu-items .logOut{
+    padding-left: 0;
+}
+
+.myButton{
+    margin-top: 30px;
+}
+.dash-content{
+    margin-top: 50px;
+}
+body.dark .dash-content .myButton{
+    background-color: #3A3B3C;
+    border: 1px solid #3A3B3C;
+    color: #ccc;
+}
+
+body.dark .modal-content {
+    background-color: #242526;
+    color: #f8f9fa;
+    border: 1px solid #495057;
+}
+
+body.dark .modal-body input{
+    background-color: #242526;
+    color: #ccc;
+    border: 1px solid #4d4c4c;
+}
+
+body.dark .modal-body select{
+    background-color: #242526;
+    color: #ccc;
+    border: 1px solid #4d4c4c;
+}
+
