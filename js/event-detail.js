@@ -57,30 +57,20 @@ logOutIcon.addEventListener('click', () => {
     window.location.href = "login.html";
 });
 
-// window.addEventListener('scroll', () => {
-//     let header = document.querySelector("header");
-
-//     if (scrollY > 50) {
-//         header.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
-//     } else {
-//         header.style.backgroundColor = "white";
-//     }
-// });
 
 
+// const eventData = JSON.parse(localStorage.getItem('eventDetails'));
 
-const eventData = JSON.parse(localStorage.getItem('eventDetails'));
-
-if (eventData) {
-    document.getElementById('eventTitle').textContent = eventData.title;
-    document.getElementById('eventCategory').textContent = eventData.category;
-    document.getElementById('eventType').textContent = eventData.eventType;
-    document.getElementById('eventImage').src = eventData.image;
-    document.getElementById('eventDate').textContent = eventData.date;
-    document.getElementById('price').textContent = eventData.price;
-} else {
-    alert('Məlumatlar tapılmadı!');
-}
+// if (eventData) {
+//     document.getElementById('eventTitle').textContent = eventData.title;
+//     document.getElementById('eventCategory').textContent = eventData.category;
+//     document.getElementById('eventType').textContent = eventData.eventType;
+//     document.getElementById('eventImage').src = eventData.image;
+//     document.getElementById('eventDate').textContent = eventData.date;
+//     document.getElementById('price').textContent = eventData.price;
+// } else {
+//     alert('Məlumatlar tapılmadı!');
+// }
 
 
 const days = document.getElementById("days");
@@ -142,7 +132,7 @@ bookNow.addEventListener('click', () => {
 
 let loginUser = JSON.parse(localStorage.getItem("users"));
 
-if (loginUser.role == "admin") {
+if (loginUser && loginUser.role == "admin") {
     let header = document.querySelector(".admin-button");
 
     let adminButton = document.createElement("button");

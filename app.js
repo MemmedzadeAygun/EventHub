@@ -18,18 +18,10 @@ profileImg.addEventListener('click', () => {
 
 });
 
-// window.addEventListener('scroll', () => {
-//     let header = document.querySelector("header");
 
-//     if (scrollY > 50) {
-//         header.style.boxShadow = "0 4px 10px rgba(0, 0, 0, 0.1)";
-//     } else {
-//         header.style.backgroundColor = "white";
-//     }
-// });
 
 const body = document.querySelector("body"),
-modeToggle = body.querySelector(".mode-toggle");
+    modeToggle = body.querySelector(".mode-toggle");
 
 let getMode = localStorage.getItem("mode");
 if (getMode && getMode === "dark") {
@@ -93,33 +85,33 @@ logOutIcon.addEventListener('click', () => {
 
 let cards = document.querySelectorAll(".card");
 
-cards.forEach(card => {
-    card.addEventListener('click', function () {
-        const title = card.querySelector('h3').textContent;
-        const category = card.getAttribute('data-category');
-        const eventType = card.getAttribute('data-event-type');
-        const image = card.querySelector('img').getAttribute('src');
-        const date = card.querySelector('span').textContent;
-        const price = card.querySelector('p').textContent;
+// cards.forEach(card => {
+//     card.addEventListener('click', function () {
+//         const title = card.querySelector('h3').textContent;
+//         const category = card.getAttribute('data-category');
+//         const eventType = card.getAttribute('data-event-type');
+//         const image = card.querySelector('img').getAttribute('src');
+//         const date = card.querySelector('span').textContent;
+//         const price = card.querySelector('p').textContent;
 
-        const eventData = {
-            title: title,
-            category: category,
-            eventType: eventType,
-            image: image,
-            date: date,
-            price: price
-        };
+//         const eventData = {
+//             title: title,
+//             category: category,
+//             eventType: eventType,
+//             image: image,
+//             date: date,
+//             price: price
+//         };
 
-        localStorage.setItem('eventDetails', JSON.stringify(eventData));
+//         localStorage.setItem('eventDetails', JSON.stringify(eventData));
 
-        window.location.href = 'event-details.html';
-    });
-});
+//         window.location.href = 'event-details.html';
+//     });
+// });
 
 let loginUser = JSON.parse(localStorage.getItem("users"));
 
-if (loginUser.role == "admin") {
+if (loginUser && loginUser.role == "admin") {
     let header = document.querySelector(".admin-button");
 
     let adminButton = document.createElement("button");
@@ -192,6 +184,24 @@ function createCard(event, index) {
     let card_img = document.createElement("div");
     card_img.classList.add("card-img");
 
+    let savedIcon = document.createElement("div");
+    savedIcon.classList.add("savedIcon");
+
+    let icon = document.createElement("i");
+    icon.classList.add("fa-regular", "fa-bookmark");
+
+    let savedStates = JSON.parse(localStorage.getItem("savedStates")) || {};
+
+    // localStorage-də saxlanmış vəziyyət varsa, onu tətbiq edirik
+    if (savedStates[index]) {
+        icon.classList.remove("fa-regular");
+        icon.classList.add("fa", "fa-bookmark");
+    }
+
+    savedIcon.appendChild(icon);
+
+    savedIcon.appendChild(icon);
+
     let card_content = document.createElement("div");
     card_content.classList.add("card-content");
 
@@ -202,15 +212,15 @@ function createCard(event, index) {
     h3.textContent = event.event_name;
 
     let p = document.createElement("p");
-    let formatTicketPrice=`${event.ticket_price}$`
+    let formatTicketPrice = `${event.ticket_price}$`
     p.textContent = formatTicketPrice;
-    
+
     if (document.body.classList.contains("dark")) {
         p.style.color = "white";
     } else {
         p.style.color = "black";
     }
-    
+
     const observer = new MutationObserver(() => {
         if (document.body.classList.contains("dark")) {
             p.style.color = "white";
@@ -218,16 +228,17 @@ function createCard(event, index) {
             p.style.color = "black";
         }
     });
-    
+
     observer.observe(document.body, { attributes: true, attributeFilter: ["class"] });
 
 
     let span = document.createElement("span");
-    let formatDateTime=event.event_date.replace("T"," ");
+    let formatDateTime = event.event_date.replace("T", " ");
     span.textContent = formatDateTime;
 
     card.appendChild(card_img);
     card_img.appendChild(img);
+    card_img.appendChild(savedIcon);
     card.appendChild(card_content);
     card_content.appendChild(h3);
     card_content.appendChild(p);
@@ -258,6 +269,8 @@ function addCard() {
 
     filterCategory();
     filterCategoryAndType();
+
+   
 }
 
 addCard();

@@ -19,6 +19,13 @@ registerForm.addEventListener("submit", (event) => {
     }
 
     let role=username==="admin"? "admin":"user";
+    // if (username==="admin") {
+    //     role="admin"
+    // }else if (username==="user") {
+    //     role="user"
+    // }else{
+    //     role=null
+    // }
 
     const newUser = {
         name: name,

@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/event-detail.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/user.css">
+    <title>My Profile</title>
+</head>
+<body>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
+    <header>
+        <div class="head">
+            <div class="logo">
+                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+            </div>
+            <div class="user-details">
+                <div class="admin-button"></div>
+                <div class="dark-mood">
+                    <li class="mode">
+                        <a href="#">
+                            <i class="fa-regular fa-moon"></i>
+                        </a>
+    
+                        <div class="mode-toggle">
+                            <span class="switch"></span>
+                        </div>
+                    </li>
+                </div>
+                <div class="profile">
+                    <img class="profile-img"
+                        src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                        onclick="toggleMenu()" alt="">
+                    <div class="sub-menu-wrap" id="subMenu">
+                        <div class="sub-menu">
+                            <div class="user-info">
+                                <img src="./img/default-avatar-profile-icon-social-media-user-vector-49816613_-_Copy-removebg-preview.png"
+                                    alt="">
+                                <h3 id="userAccount">Jhon Wick</h3>
+                            </div>
+                            <hr>
+
+                            <a href="user.html" class="sub-menu-link">
+                                My profile
+                            </a>
+                            <a href="login.html" id="sign-out-text" class="sub-menu-link">
+                                Sign out <i id="logOut" class="fa-solid fa-right-from-bracket hidden"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </header>
+    <main>
+        <div class="part_1"></div>
+        <div class="part_2">
+            <div class="part_2_1">
+                <div class="my-profile">
+                    <img class="my-profile-img" src="./img/img-2 (1).jpg" alt="">
+                    <input type="file" id="fileInput" accept="image/*">
+                    <label for="fileInput" class="upload-overlay"><i class="fa-solid fa-camera"></i></label>
+                </div>
+                <div class="info">
+                    <p id="name">name</p>
+                    <p id="surname">surname</p>
+                </div>
+                <p class="description" id="description">Hey, I am a</p>
+                <div class="contact-me">
+                    <h4>Find me on</h4>
+                    <div class="contact">
+                        <div class="icon">
+                            <i class="fa-brands fa-instagram"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-twitter"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-linkedin-in"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-facebook-f"></i>
+                        </div>
+                        <div class="icon">
+                            <i class="fa-brands fa-youtube"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="part_2_2">
+                <div class="saved-orders">
+                    <div class="saved"><i class="fa-solid fa-bookmark"></i> Saved Events</div>
+                    <div class="orders"><i class="fa-solid fa-box"></i>My Orders</div>
+                </div> 
+                <div class="bookmark-events">
+                    <div class="bookmark-event">
+                        <div class="bookmark-event-image">
+                            <img src="./img/img-4.jpg" alt="">
+                        </div>
+                        <div class="bookmark-event-detail">
+                            <h4>Sustainable Planet for Future Generations</h4>
+                            <p>2025-02-27 01:45</p>
+                             <div class="detail-icon">
+                                <i class="fa-solid fa-eye"></i>
+                                <a href="./event-details.html">View</a>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="my-orders">
+                    <div class="my-order">
+                        <div class="sub-my-order1">
+                            <div class="order-image">
+                                <img src="./img/img-8.jpg" alt="">
+                            </div>
+                            <div class="my-order-detail">
+                                <h4>Safety First Conference </h4>
+                                <p class="price">$10</p>
+                                <p class="invoice-id">Invoice ID : YCCURW-000000</p>
+                            </div>
+                        </div>
+                        <hr class="custom-hr">
+                        <div class="sub-my-order2">
+                            <div class="event-date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <div class="event-date-detail">
+                                    <p class="date">Event date</p>
+                                    <p class="sub-date">2025-02-27 01:45</p>
+                                </div>
+                            </div>
+                            <div class="total-ticket">
+                                <i class="fa-solid fa-ticket"></i>
+                                <div class="ticket-detail">
+                                    <p class="ticket">Total ticket</p>
+                                    <p class="sub-ticket">3</p>
+                                </div>
+                            </div>
+                            <div class="paid-amount">
+                                <i class="fa-solid fa-money-bill"></i>
+                                <div class="paid-amount-detail">
+                                    <p class="amount">Paid Amount</p>
+                                    <p class="sub-amount">$30.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="my-order">
+                        <div class="sub-my-order1">
+                            <div class="order-image">
+                                <img src="./img/img-7.jpg" alt="">
+                            </div>
+                            <div class="my-order-detail">
+                                <h4>Safety First Conference </h4>
+                                <p class="price">$10</p>
+                                <p class="invoice-id">Invoice ID : YCCURW-000000</p>
+                            </div>
+                        </div>
+                        <hr class="custom-hr">
+                        <div class="sub-my-order2">
+                            <div class="event-date">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <div class="event-date-detail">
+                                    <p class="date">Event date</p>
+                                    <p class="sub-date">2025-02-27 01:45</p>
+                                </div>
+                            </div>
+                            <div class="total-ticket">
+                                <i class="fa-solid fa-ticket"></i>
+                                <div class="ticket-detail">
+                                    <p class="ticket">Total ticket</p>
+                                    <p class="sub-ticket">3</p>
+                                </div>
+                            </div>
+                            <div class="paid-amount">
+                                <i class="fa-solid fa-money-bill"></i>
+                                <div class="paid-amount-detail">
+                                    <p class="amount">Paid Amount</p>
+                                    <p class="sub-amount">$30.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                 <!-- <div class="order-events"> -->
+                    <!-- <div class="order-event">
+                        <div class="event-image">
+                            <img src="" alt="">
+                        </div>
+                        <div class="event-detail">
+                            <h4>Event name</h4>
+                            <p>date</p>
+                        </div>
+                    </div> -->
+                 <!-- </div> -->
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="sub-footer">
+            <div class="company">
+                <h3>Company</h3>
+                <ul>
+                    <li>About Us</li>
+                    <li>Help</li>
+                    <li>Contact Us</li>
+                </ul>
+            </div>
+            <div class="follow-us">
+                <h3>Follow Us</h3>
+                <div class="icons">
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-facebook"></i></a>
+                    </div>
+                    <div class="icon">
+                        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="./js/user.js"></script>
+    
+    <script src="./js/connection.js"></script>
+</body>
+</html>

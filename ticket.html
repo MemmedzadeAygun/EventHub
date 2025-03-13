@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/ticket.css">
+    <title>Ticket</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="header">
+            <div class="logo">
+                <img src="./img/z-ticket-removebg-preview.png" alt="">
+            </div>
+            <p><a href="#">Download</a></p>
+        </div>
+        <div class="invoice">
+            <h3>Invoice</h3>
+            <div class="invoice-detail">
+                <div class="part1">
+                    <p>Invoice to John Doe</p>
+                    <p>140 St Kilda Rd</p>
+                    <p>Melbourne, Victoria</p>
+                    <p>3000, Australia</p>
+                </div>
+                <div class="part2">
+                    <p>Invoice ID : YCCURW-000000</p>
+                    <p>Order Date : 10/05/2022</p>
+                    <p>Near MBD Mall,</p>
+                </div>
+            </div>
+            <i class="fa-solid fa-scissors"></i>
+            <div class="ticket-detail">
+                <div class="event-image">
+                    <img id="event-image" alt="">
+                </div>
+                <div class="event-detail">
+                    <h3 id="event-name">Event name</h3>
+                    <span id="event-date">event date</span>
+                    <div class="user-detail">
+                        <span id="username"></span>
+                        <span id="usersurname"></span>
+                    </div>
+                    <div class="price">
+                        <span>Total: </span>
+                        <span id="price"></span>
+                    </div>
+                </div>
+                <div class="qrcode">
+                    <div class="qr-code">
+                        <img src="./img/qr-code (1).png" alt="">
+                    </div>
+                </div>
+            </div>
+            <div class="element"></div>
+        </div>
+    </div>
+
+    <script src="./js/ticket.js"></script>
+</body>
+
+</html>

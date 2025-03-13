@@ -1,10 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="./css/order-confirm.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <title>Order-Confirm</title>
 </head>
 <style>
@@ -12,11 +16,12 @@
         display: none;
     }
 </style>
+
 <body>
     <header>
         <div class="head">
             <div class="logo">
-                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+                <img src="./img/z-ticket-removebg-preview.png" alt="">
             </div>
             <div class="user-details">
                 <div class="admin-button"></div>
@@ -25,7 +30,7 @@
                         <a href="#">
                             <i class="fa-regular fa-moon"></i>
                         </a>
-    
+
                         <div class="mode-toggle">
                             <span class="switch"></span>
                         </div>
@@ -73,62 +78,62 @@
                         <div class="input-detail">
                             <div class="firstname">
                                 <label for="name">FirstName*</label> <br>
-                                <input type="text" placeholder="FirstName">
+                                <input type="text" id="name" placeholder="FirstName">
                             </div>
                             <div class="lastname">
                                 <label for="surname">LastName*</label> <br>
-                                <input type="text" placeholder="LastName"> <br>
+                                <input type="text" id="surname" placeholder="LastName"> <br>
                             </div>
                         </div>
                         <div class="input-detail">
                             <div class="email">
                                 <label for="email">Email*</label> <br>
-                                <input type="email" placeholder="Email">
+                                <input type="email" id="email" placeholder="Email">
                             </div>
                             <div class="address">
                                 <label for="address">Address*</label> <br>
-                                <input type="text" placeholder="Address"> <br>
+                                <input type="text" id="address" placeholder="Address"> <br>
                             </div>
                         </div>
                         <div class="input-detail">
                             <div class="country">
                                 <label for="country">Country*</label> <br>
-                                <input type="text" placeholder="Country">
+                                <input type="text" id="country" placeholder="Country">
                             </div>
                             <div class="state">
                                 <label for="state">State*</label> <br>
-                                <input type="text" placeholder="State"> <br>
+                                <input type="text" id="state" placeholder="State"> <br>
                             </div>
                         </div>
-                       <div class="input-detail">
-                        <div class="city">
-                            <label for="city">City*</label> <br>
-                            <input type="text" placeholder="City">
+                        <div class="input-detail">
+                            <div class="city">
+                                <label for="city">City*</label> <br>
+                                <input type="text" id="city" placeholder="City">
+                            </div>
+                            <div class="zip-code">
+                                <label for="zip-code">Zip Code*</label> <br>
+                                <input type="text" id="zip-code" placeholder="Zip Code">
+                            </div>
                         </div>
-                        <div class="zip-code">
-                            <label for="zip-code">Zip Code*</label> <br>
-                            <input type="text" placeholder="Zip Code">
-                        </div>
-                       </div>
                     </form>
                 </div>
                 <div class="bank-account">
                     <h4>Card Information</h4>
                     <hr>
-                    <form action="">
+                    <form>
                         <div class="card-number">
-                            <label for="">Card Number*</label> <br>
-                            <input class="card" type="text">
+                            <label for="card-number">Card Number*</label> <br>
+                            <input class="card" id="card-number" type="text">
                         </div>
                         <div class="input-detail2">
                             <div class="expiry-date">
-                                <label for="">Expiry Date</label> <br>
-                                <input class="card-detail" type="text">
+                                <label for="expiry-date">Expiry Date</label> <br>
+                                <input class="card-detail" id="expiry-date" type="text" placeholder="MM/YY">
                             </div>
                             <div class="cvv">
-                                <label for="">CVV</label> <br>
-                                <input class="card-detail" type="text">
-                            </div> 
+                                <label for="cvv">CVV</label> <br>
+                                <input class="card-detail" id="cvv" type="text">
+                            </div>
                         </div>
                         <button class="confirm">Confirm and Pay</button>
                     </form>
@@ -167,5 +172,8 @@
     </footer>
 
     <script src="./js/order-confirm.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+   
 </body>
+
 </html>

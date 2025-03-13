@@ -1,0 +1,809 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    overflow-x: hidden;
+}
+.part_1{
+    width: 100%;
+    max-width: 100%;
+    height: 270px;
+    background-image: url(../img/hero-cover-01.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    opacity: 0.9;
+    padding-top: 120px;
+    /* z-index: -1; */
+    overflow-x: hidden;
+}
+.part_2{
+    width: 85%;
+    margin: 0 auto;
+    /* max-width: 1200px; */
+    display: flex;
+    gap: 20px;
+}
+.part_2_1{
+    width: 30%;
+    height: 500px;
+    background-color: #fff;
+    position: relative;
+    margin-top: -80px;
+    z-index: 1;
+    border-radius: 5px;
+    padding: 30px;
+    padding-left: 40px;
+    padding-right: 40px;
+    padding-top: 30px;
+    border: 1px solid #E6E5E5;
+}
+
+body.dark .part_2_1{
+    background-color: #1a1d1f;
+    border: none;
+}
+.my-profile{
+    width: 135px;
+    height: 135px;
+    position: relative;
+    border: 3px solid green;
+    padding: 1px;
+    border-radius: 50%;
+    margin: auto;
+}
+.my-profile .my-profile-img{
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+}
+input[type="file"] {
+    display: none; 
+}
+
+.upload-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 75%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 40px;
+    background-color: #fff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+}
+.upload-overlay i{
+    color: black;
+    font-size: 14px;
+}
+
+.upload-overlay:hover {
+    background-color: rgb(197, 68, 148);
+    color: #fff;
+}
+.upload-overlay i:hover {
+   color: #fff;
+}
+.info{
+    width: 40%;
+    margin: auto;
+    margin-top: 25px;
+    line-height: 1.4;
+}
+.info p{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+    color: black;
+}
+body.dark .info p{
+    color: #fff;
+}
+.description{
+    text-align: center;
+    line-height: 5;
+    font-size: 14px;
+    color: grey;
+}
+.contact-me h4{
+    text-align: center;
+    line-height: 5;
+}
+body.dark .contact-me h4{
+    color: #fff;
+}
+.contact{
+    width: 90%;
+    display: flex;
+    gap: 10px;
+    margin: auto;
+}
+.contact .icon{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid green;
+    position: relative;
+}
+body.dark .contact .icon{
+    border: 1px solid #ccc;
+}
+body.dark .icon{
+    border: 1px solid #ccc;
+    cursor: pointer;
+}
+.contact .icon i{
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}
+body.dark .icon i{
+    color: #ccc;
+}
+.part_2_2{
+    width: 70%;
+}
+.saved-orders{
+    display: flex;
+    /* width: 780px; */
+    width: 100%;
+    border: 1px solid black;
+    margin-top: 25px;
+    height: 50px;
+    padding: 5px;
+    border: 1px solid #E6E5E5;
+    background-color: #fff;
+    border-radius: 3px;
+}
+body.dark .saved-orders{
+    background-color: #1a1d1f;
+    border: none;
+}
+.saved-orders .saved{
+    width: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+}
+body.dark .saved-orders .saved{
+    color: #ccc;
+}
+.saved-orders .orders{
+    width: 50%;
+    /* border: 1px solid #E6E5E5; */
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    font-size: 15px;
+    font-weight: 500;
+    border-radius: 4px;
+    /* background-color: #c20d8d; */
+    /* color: #fff; */
+}
+.order-events{
+    width: 100%;
+    height: auto;
+    border: 1px solid black;
+}
+.order-event{
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    margin-top: 20px;
+    border-radius: 4px;
+    border: 1px solid #E6E5E5;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+.event-image{
+    width: 180px;
+    height: 100%;
+    background-color: red;
+}
+.event-image img{
+    width: 100%;
+    height: 100%;
+}
+.event-detail{
+    width: 300px;
+    height: 100%;
+    background-color: grey;
+}
+.event-detail h4{
+    font-size: 19px;
+    font-weight: 600;
+}
+.event-detail p{
+    line-height: 3;
+    color: black;
+    font-size: 15px;
+}
+.saved-orders .active{
+    background-color: #43a11b;
+    color: #fff;
+}
+
+.bookmark-events{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 20px;
+}
+.bookmark-event{
+    width: 100%;
+    height: 150px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #E6E5E5;
+    padding: 20px;
+    display: flex;
+    gap: 15px;
+}
+body.dark .bookmark-event{
+    background-color: #1a1d1f;
+    border: none;
+}
+.bookmark-event-image{
+    width: 160px;
+    height: 100%;
+    border-radius: 5px;
+}
+.bookmark-event-image img{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+}
+.bookmark-event-detail{
+    width: 300px;
+    height: 100%;
+    /* background-color: grey; */
+}
+.bookmark-event-detail h4{
+    font-size: 19px;
+    font-weight: 600;
+}
+body.dark .bookmark-event-detail h4{
+    color: #fff;
+}
+.bookmark-event-detail p{
+    line-height: 2.2;
+    color: rgb(73, 71, 71);
+    font-size: 14px;
+}
+body.dark .bookmark-event-detail p{
+    font-weight: 500;
+}
+.detail-icon{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #E6E5E5;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+body.dark .detail-icon{
+    border: none;
+    background-color: #272b30;
+    border-radius: 3px;
+}
+.detail-icon i{
+    font-size: 14px;
+}
+body.dark .detail-icon i{
+    color: #ccc;
+}
+.detail-icon a{
+    font-size: 14px;
+    color: black;
+    text-decoration: none;
+}
+body.dark .detail-icon a{
+    color: #ccc;
+}
+.my-orders{
+    width: 100%;
+    height: auto;
+    /* border: 1px solid black; */
+    display: flex;
+    margin-top: 20px;
+}
+.my-order{
+    width: 100%;
+    height: 250px;
+    background-color: #fff;
+    border-radius: 4px;
+    border: 1px solid #E6E5E5;
+    padding: 20px;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+body.dark .my-order{
+    background-color: #1a1d1f;
+    border: none;
+}
+.sub-my-order1{
+    width: 100%;
+    height: 120px;
+    display: flex;
+    gap: 15px;
+}
+.custom-hr {
+    border: none; 
+    height: 1px; 
+    background-color: #E6E5E5; 
+    /* margin: 20px 0; */
+    margin-top: 20px;
+}
+body.dark .custom-hr{
+    height: 1px;
+    background-color: #ccc;
+}
+.order-image{
+    width: 160px;
+    height: 100%;
+    border-radius: 5px;
+}
+.order-image img{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+.my-order-detail{
+    width: 300px;
+    height: 100%;
+}
+.my-order-detail .invoice-id{
+    color: grey;
+    font-size: 15px;
+}
+.my-order-detail h4{
+    font-size: 19px;
+    font-weight: 600;
+    color: black;
+}
+body.dark .my-order-detail h4{
+    color: #fff;
+}
+.my-order-detail p{
+    line-height: 3;
+    color: black;
+    font-size: 16px;
+}
+body.dark .my-order-detail .price{
+    color: #fff;
+}
+.sub-my-order2{
+    display: flex;
+}
+.event-date{
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+.total-ticket{
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+.paid-amount{
+    display: flex;
+    padding: 20px;
+    gap: 10px;
+}
+.event-date i{
+    font-size: 18px;
+    color: #c20d8d;
+    margin-top: 10px;
+}
+body.dark .event-date i{
+    color: #ccc;
+}
+.event-date-detail p{
+    color: black;
+}
+.event-date-detail .date{
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+}
+.event-date-detail .sub-date{
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 600;
+}
+body.dark .event-date-detail .sub-date{
+    color: #fff;
+    font-weight: 500;
+}
+.total-ticket i{
+    font-size: 18px;
+    color: #c20d8d;
+    margin-top: 10px;
+}
+body.dark .total-ticket i{
+    color: #ccc;
+}
+.ticket-detail p{
+    color: black;
+}
+.ticket-detail .ticket{
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+}
+.ticket-detail .sub-ticket{
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 600;
+}
+body.dark .ticket-detail .sub-ticket{
+    color: #fff;
+    font-weight: 500;
+}
+.paid-amount i{
+    font-size: 18px;
+    color: #c20d8d;
+    margin-top: 10px;
+}
+body.dark .paid-amount i{
+    color: #ccc;
+}
+.paid-amount-detail p{
+    color: black;
+}
+.paid-amount-detail .amount{
+    font-size: 14px;
+    font-weight: 500;
+    color: grey;
+}
+.paid-amount-detail .sub-amount{
+    font-size: 14px;
+    line-height: 2;
+    font-weight: 600;
+}
+body.dark .paid-amount-detail .sub-amount{
+    color: #fff;
+    font-weight: 500;
+}
+.company h3{
+    padding-left: 10px;
+}
+body.dark .follow-us .icons .icon{
+    border: 1px solid #fff;
+}
+body.dark .follow-us .icons .icon i{
+    color:  #fff;
+}
+
+@media(min-width:1200px){
+    .header{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .header .head{
+        width: 100%;
+    }
+    main .part_1{
+        width: 100%;
+        overflow-x: hidden;
+    }
+    .part_2{
+        width: 1068px;
+    }
+    .sub-footer{
+        width: 1068px;
+    }
+    .contact{
+        width: 100%;
+    }
+}
+@media((min-width:992px) and (max-width:1199px)){
+    .part_2{
+        width: 960px;
+        margin: auto;
+        gap: 15px;
+    }
+    .contact{
+        width: 100%;
+    }
+    .contact .icon{
+        width: 35px;
+        height: 35px;
+    }
+}
+
+@media((min-width:768px) and (max-width:991px)){
+    .part_2{
+        width: 720px;
+    }
+    .my-profile{
+        width: 110px;
+        height: 110px;
+    }
+    .info{
+        width: 80%;
+    }
+    .part_2_1{
+        width: 35%;
+        height: 450px;
+        padding: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .part_2_2{
+        width: 65%;
+    }
+    .contact{
+        width: 95%;
+    }
+    .contact .icon{
+        width: 35px;
+        height: 35px;
+    }
+    .contact .icon{
+        font-size: 14px;
+    }
+    .bookmark-event{
+        height: 140px;
+    }
+    .bookmark-event-image{
+        width: 130px;
+    }
+    .bookmark-event-detail h4{
+        font-size: 16px;
+    }
+    .saved-orders{
+        height: 44px;
+    }
+    .sub-my-order1{
+        height: 100px;
+    }
+    .sub-my-order1 .order-image{
+        width: 140px;
+    }
+    .my-order-detail{
+        width: 272px;
+    }
+    .my-order-detail h4{
+        font-size: 18px;
+    }
+    .my-order-detail p{
+        line-height: 2;
+        font-size: 14px;
+    }
+    .sub-date{
+        font-size: 12px;
+    }
+}
+@media((min-width:601px) and (max-width:767px)){
+    .part_2{
+        width: 510px;
+        gap: 10px;
+    }
+    .my-profile{
+        width: 95px;
+        height: 95px;
+    }
+    .info{
+        width: 80%;
+    }
+    .info p{
+        font-size: 16px;
+        margin-bottom: 15px;
+        line-height: 1;
+    }
+    .part_2_1{
+        width: 40%;
+        height: 450px;
+        padding: 25px;
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+    .description{
+        line-height: 2;
+    }
+    .part_2_2{
+        width: 65%;
+    }
+    .contact{
+        width: 95%;
+        flex-wrap: wrap;
+    }
+    .contact .icon{
+        width: 29px;
+        height: 29px;
+    }
+    .contact .icon{
+        font-size: 12px;
+    }
+    .bookmark-event{
+        height: 120px;
+        padding-right: 10px;
+    }
+    .bookmark-event-detail{
+        width: 146px;
+    }
+    .bookmark-event-image{
+        width: 100px;
+    }
+    .bookmark-event-detail h4{
+        font-size: 13px;
+    }
+    .bookmark-event-detail p{
+        font-size: 11px;
+    }
+    .saved-orders{
+        height: 33px;
+    }
+    .saved-orders .saved{
+        font-size: 13px;
+    }
+    .saved-orders .orders{
+        font-size: 13px;
+    }
+    .sub-my-order1{
+        height: 90px;
+    }
+    .sub-my-order2{
+        margin-top: 10px;
+    }
+    .my-order{
+        height: 260px;
+    }
+    .sub-my-order1 .order-image{
+        width: 100px;
+    }
+    .my-order-detail{
+        width: 146px;
+    }
+    .my-order-detail .invoice-id{
+        font-size: 11px;
+    }
+    .my-order-detail h4{
+        font-size: 14px;
+    }
+    .my-order-detail p{
+        line-height: 2;
+        font-size: 12px;
+    }
+    .sub-date{
+        font-size: 12px;
+    }
+    .detail-icon{
+        width: 80px;
+        height: 26px;
+    }
+    .event-date{
+        padding: 10px;
+    }
+    .total-ticket{
+        padding: 10px;
+    }
+    .paid-amount{
+        padding: 10px;
+    }
+    .event-date-detail .sub-date{
+        font-size: 12px;
+    }
+}
+@media(max-width:600px){
+    .part_2{
+        width: 85%;
+        display: block;
+    }
+    .part_2 .part_2_1{
+        width: 100%;
+        height: 516px;
+    }
+    .part_2_2{
+        width: 100%;
+    }
+    .info{
+        width: 60%;
+        margin-bottom: 20px;
+    }
+    .info p{
+        font-size: 20px;
+    }
+    .description{
+        font-size: 16px;
+        line-height: 2;
+    }
+    .contact{
+        width: 100%;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .bookmark-event{
+        padding-right: 10px;
+    }
+    .bookmark-event-image{
+        width: auto;
+        height: auto;
+    }
+    .bookmark-event-detail{
+        width: auto;
+        height: auto;
+    }
+    .bookmark-event-detail h4{
+        font-size: 16px;
+    }
+    .detail-icon{
+        margin-top: 10px;
+    }
+    .sub-footer .follow-us{
+        margin-left: 0;
+    }
+    .my-order{
+        height: 255px;
+    }
+    .sub-my-order1{
+        height: 110px;
+    }
+    .sub-my-order1 .order-image{
+        width: auto;
+        height: auto;
+    }
+    .sub-my-order1 .my-order-detail{
+        width: auto;
+        height: auto;
+    }
+    .my-order-detail h4{
+        font-size: 16px;
+    }
+    .my-order-detail p{
+        line-height: 2;
+    }
+    .my-order-detail .invoice-id{
+        font-size: 13px;
+    }
+    .event-date-detail .sub-date{
+        font-size: 13px;
+    }
+}
+@media(max-width:472px){
+    .event-date{
+        padding: 0;
+    }
+    .total-ticket{
+        padding: 0;
+    }
+    .paid-amount{
+        padding: 0;
+    }
+    .sub-my-order2{
+        gap: 8px;
+        margin-top: 10px;
+    }
+}

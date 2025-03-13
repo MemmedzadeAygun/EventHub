@@ -295,10 +295,12 @@ body.dark .bank-account h4{
     border: 0;
     outline: 1px solid rgb(223, 220, 220);
     background-color: #f9f9f9;
+    font-size: 16px;
 }
 body.dark .input-detail input{
     background-color: #242526;
     outline: none;
+    color: #fff;
 }
 body.dark .input-detail ::placeholder{
     color: #fff;
@@ -323,10 +325,12 @@ body.dark .input-detail label{
     border: 0;
     outline: 1px solid rgb(223, 220, 220);
     background-color: #f9f9f9;
+    font-size: 16px;
 }
 body.dark .card{
     background-color: #242526;
     outline: none;
+    color: #fff;
 }
 .card-detail{
     width: 186px;
@@ -337,10 +341,12 @@ body.dark .card{
     border: 0;
     outline: 1px solid rgb(223, 220, 220);
     background-color: #f9f9f9;
+    font-size: 16px;
 }
 body.dark .card-detail{
     background-color: #242526;
     outline: none;
+    color: #fff;
 }
 .card-number{
     font-size: 14px;
