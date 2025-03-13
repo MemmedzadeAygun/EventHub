@@ -15,7 +15,7 @@ profileImg.addEventListener('click', () => {
         profile.style.border = "1px solid green";
     }
     flag = !flag;
-
+ 
 });
 
 const body = document.querySelector("body"),

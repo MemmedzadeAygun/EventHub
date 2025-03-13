@@ -718,7 +718,7 @@ body.dark .follow-us .icons .icon i{
     }
 }
 @media(max-width:600px){
-    .part_2{
+    .part_2{ 
         width: 85%;
         display: block;
     }

@@ -187,7 +187,7 @@ body.dark .user-detail{
         font-size: 18px;
     }
     .user-detail span{
-        font-size: 15px;
+        font-size: 15px; 
     }
 }
 @media(max-width:600px){

@@ -26,7 +26,7 @@ if (getMode && getMode === "dark") {
     body.classList.toggle("dark");
 }
 
-modeToggle.addEventListener("click", () => {
+modeToggle.addEventListener("click", () => { 
     body.classList.toggle("dark");
     if (body.classList.contains("dark")) {
         localStorage.setItem("mode", "dark");

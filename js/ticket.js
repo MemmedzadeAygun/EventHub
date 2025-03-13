@@ -14,7 +14,7 @@ if (selectedEventIndex !== null && events[selectedEventIndex]) {
 }else{
     alert("Melumat tapilmadi");
 }
-
+ 
 const body = document.querySelector("body")
 
 let getMode = localStorage.getItem("mode");

@@ -12,7 +12,7 @@ function clickIcon() {
             icon.classList.add("fa-regular", "fa-bookmark");
             icon.classList.remove("fa");
         }
-
+ 
         let flag = savedStates[index] || false;
 
         icon.addEventListener('click', (event) => {
