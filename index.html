@@ -7,6 +7,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
     <link rel="stylesheet" href="./style.css">
     <title>Events</title>
 </head>
@@ -24,6 +26,11 @@
                  <img src="./img/z-ticket-removebg-preview.png" alt="">
             </div>
             <div class="user-details">
+                <div class="pages">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                    </ul>
+                </div>
                 <div class="admin-button"></div>
                 <div class="dark-mood">
                     <li class="mode">
@@ -65,12 +72,29 @@
         </div>
     </header>
     <main>
-        <div class="part1">
+        <div id="bgCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://cdn.iticket.az/event/slide/YkDY6h3t0BZtTvFc0Pkg1LM3fTc1eWESTWmhz9vW.jpg" class="d-block w-100" alt="Festival">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.iticket.az/event/gallery/YNrAhRsMb24oSRtHT8qhW7uiiFFxSfl3O0egTiGV.jpg" class="d-block w-100" alt="Image 1">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.iticket.az/event/slide/eJZwiauSlFefbb0UlGbHdSTqiD2Me8su3h4I99DR.jpg" class="d-block w-100" alt="Image 2">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.iticket.az/event/slide/XXIe1OVZaQKwnbctcxemEg3Z4aZaz7mMGYBi05DO.jpg" class="d-block w-100" alt="Image 3">
+                </div>
+            </div>
+        </div>
+        
+        <div class="part1-overlay">
             <div class="sub-part1">
                 <select name="" id="eventType">
                     <option value="browse all">Browse All</option>
                     <option value="online">Online Events</option>
-                    <option value="vanue">Vanue Events</option>
+                    <option value="venue">Venue Events</option>
                 </select>
                 <select name="" id="categoryFilter">
                     <option value="All">All</option>
@@ -88,6 +112,7 @@
                 <button class="btn1" id="findBtn">Find</button>
             </div>
         </div>
+        
 
         <div class="categories">
             <div class="category" data-category="All">
@@ -124,8 +149,8 @@
                 <p><b>Family and Friends</b></p>
             </div>
         </div>
-        <div class="cards" id="cards">
-            <div class="card" data-category="Arts" data-event-type="online">
+        <div data-aos="fade-up" class="cards" id="cards">
+            <!-- <div class="card" data-category="Arts" data-event-type="online">
                 <div class="card-img">
                     <img src="./img/img-1.jpg" alt="">
                 </div>
@@ -184,7 +209,7 @@
                     <p>$100</p>
                     <span class="date">25 February 2025 18:00</span>
                 </div>
-            </div>
+            </div> -->
         </div>
     </main>
     <footer>
@@ -219,6 +244,17 @@
 
     <script src="./app.js"></script>
     <script src="./js/connection.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        const myCarousel = document.querySelector('#bgCarousel');
+        const carousel = new bootstrap.Carousel(myCarousel, {
+            interval: 3000,
+            ride: 'carousel'
+        });
+
+        AOS.init();
+    </script>
 </body>
 
 </html>

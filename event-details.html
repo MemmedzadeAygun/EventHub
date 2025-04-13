@@ -30,9 +30,14 @@
     <header>
         <div class="head">
             <div class="logo">
-                 <img src="./img/z-ticket-removebg-preview.png" alt="">
+                <img src="./img/z-ticket-removebg-preview.png" alt="">
             </div>
             <div class="user-details">
+                <div class="pages">
+                    <ul>
+                        <li><a href="./index.html">Home</a></li>
+                    </ul>
+                </div>
                 <div class="admin-button"></div>
                 <div class="dark-mood">
                     <li class="mode">
@@ -40,7 +45,7 @@
                             <i class="fa-regular fa-moon"></i>
                             <!-- <span class="link-name">Dark Mode</span> -->
                         </a>
-    
+
                         <div class="mode-toggle">
                             <span class="switch"></span>
                         </div>
@@ -75,140 +80,147 @@
     </header>
 
     <main>
-        <div class="background"><a href="index.html">Home Page</a></div>
-        <div class="sub-main">
-            <div class="details">
-                <div class="event-detail1">
-                    <h2 id="eventTitle"></h2>
-                    <p><i class="fa-solid fa-circle-dot"></i><span id="eventCategory"></span></p>
-                    <p><i class="fa-solid fa-location-dot"></i><span id="eventType"></span></p>
-                    <div class="event-img">
-                        <img id="eventImage" src="" alt="" class="img-fluid" />
+        <div class="background">
+            <a href="./index.html">Home</a>
+            <div class="sub-main">
+                <div class="details">
+                    <div class="event-detail1">
+                        <h2 id="eventTitle"></h2>
+                        <p><i class="fa-solid fa-circle-dot"></i><span id="eventCategory"></span></p>
+                        <p><i class="fa-solid fa-location-dot"></i><span id="eventType"></span></p>
+                        <div class="event-img">
+                            <img id="eventImage" src="" alt="" class="img-fluid" />
+                        </div>
+                        <h3>About this event</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vel optio tempore
+                            recusandae
+                            dicta et nulla hic, blanditiis nemo? Numquam quod voluptas, perspiciatis esse aperiam
+                            voluptates
+                            magni impedit reprehenderit dicta! Suscipit quos labore beatae quaerat! Quae, iusto debitis
+                            ipsam placeat nulla incidunt repudiandae. Tempora animi, voluptates enim culpa numquam quis,
+                            magnam perferendis porro nisi possimus quaerat odit in optio? Vel nobis odio, facilis et
+                            labore
+                            praesentium dolorem, totam sit quae expedita accusantium iusto nulla deserunt odit
+                            aspernatur
+                            aliquam saepe. <br> Corporis autem exercitationem repellat laboriosam pariatur quidem nihil,
+                            consequuntur maiores necessitatibus quam, molestiae libero soluta cumque vero sint facere,
+                            explicabo assumenda animi repellendus ab excepturi eligendi at. Impedit magnam aspernatur,
+                            quos
+                            nam assumenda blanditiis voluptatem vero architecto mollitia officiis aut voluptas debitis
+                            laudantium numquam totam, hic fuga soluta officia consequuntur, delectus dolore omnis.
+                            Libero
+                            placeat perspiciatis aut, ipsum ducimus ex, sit mollitia incidunt ratione laboriosam
+                            repellat!
+                            Perferendis dolorum facilis eveniet ipsa.</p>
                     </div>
-                    <h3>About this event</h3>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur vel optio tempore recusandae
-                        dicta et nulla hic, blanditiis nemo? Numquam quod voluptas, perspiciatis esse aperiam voluptates
-                        magni impedit reprehenderit dicta! Suscipit quos labore beatae quaerat! Quae, iusto debitis
-                        ipsam placeat nulla incidunt repudiandae. Tempora animi, voluptates enim culpa numquam quis,
-                        magnam perferendis porro nisi possimus quaerat odit in optio? Vel nobis odio, facilis et labore
-                        praesentium dolorem, totam sit quae expedita accusantium iusto nulla deserunt odit aspernatur
-                        aliquam saepe. <br> Corporis autem exercitationem repellat laboriosam pariatur quidem nihil,
-                        consequuntur maiores necessitatibus quam, molestiae libero soluta cumque vero sint facere,
-                        explicabo assumenda animi repellendus ab excepturi eligendi at. Impedit magnam aspernatur, quos
-                        nam assumenda blanditiis voluptatem vero architecto mollitia officiis aut voluptas debitis
-                        laudantium numquam totam, hic fuga soluta officia consequuntur, delectus dolore omnis. Libero
-                        placeat perspiciatis aut, ipsum ducimus ex, sit mollitia incidunt ratione laboriosam repellat!
-                        Perferendis dolorum facilis eveniet ipsa.</p>
-                </div>
-                <div class="event-detail2">
-                    <h3>Event details</h3>
-                    <hr>
-                    <div id="countdown" class="countdown">
-                        <div class="time">
-                            <h2 id="days"></h2>
-                            <span>Days</span>
-                        </div>
+                    <div class="event-detail2">
+                        <h3>Event details</h3>
+                        <hr>
+                        <div id="countdown" class="countdown">
+                            <div class="time">
+                                <h2 id="days"></h2>
+                                <span>Days</span>
+                            </div>
 
-                        <div class="time">
-                            <h2 id="hours"></h2>
-                            <span>Hours</span>
-                        </div>
+                            <div class="time">
+                                <h2 id="hours"></h2>
+                                <span>Hours</span>
+                            </div>
 
-                        <div class="time">
-                            <h2 id="minutes"></h2>
-                            <span>Minutes</span>
-                        </div>
+                            <div class="time">
+                                <h2 id="minutes"></h2>
+                                <span>Minutes</span>
+                            </div>
 
-                        <div class="time">
-                            <h2 id="seconds"></h2>
-                            <span>Seconds</span>
-                        </div>
-                    </div>
-                    <div class="about">
-                        <div class="user-detail">
-                            <h4><i class="fa-solid fa-user"></i>Name and Surname</h4>
-                            <div class="name-surname">
-                                <span id="user-name"></span>
-                                <span id="user-surname"></span>
+                            <div class="time">
+                                <h2 id="seconds"></h2>
+                                <span>Seconds</span>
                             </div>
                         </div>
-                        <div class="event-date">
-                            <h4><i class="fa-regular fa-calendar"></i>Date and Time</h4>
-                            <span id="eventDate"></span>
+                        <div class="about">
+                            <div class="user-detail">
+                                <h4><i class="fa-solid fa-user"></i>Name and Surname</h4>
+                                <div class="name-surname">
+                                    <span id="user-name"></span>
+                                    <span id="user-surname"></span>
+                                </div>
+                            </div>
+                            <div class="event-date">
+                                <h4><i class="fa-regular fa-calendar"></i>Date and Time</h4>
+                                <span id="eventDate"></span>
+                            </div>
                         </div>
-                    </div>
-                    <h3>Select Tickets</h3>
-                    <hr>
-                    <div class="ticket-details">
-                        <p id="price"></p>
-                        <div class="ticket-count">
-                            <div class="minus"><span>-</span></div>
-                            <p class="count">1</p>
-                            <div class="plus"><span>+</span></div>
-                        </div>
+                        <h3>Select Tickets</h3>
+                        <hr>
+                        <div class="ticket-details">
+                            <p id="price"></p>
+                            <div class="ticket-count">
+                                <div class="minus"><span>-</span></div>
+                                <p class="count">1</p>
+                                <div class="plus"><span>+</span></div>
+                            </div>
 
+                        </div>
+                        <button id="bookNow">Book Now</button>
                     </div>
-                    <button id="bookNow">Book Now</button>
+                </div>
+                <div class="container-fluid my-5">
+                    <div class="row mt-5">
+                        <div class="owl-carousel owl-theme">
+                            <div class="item mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="https://i.ytimg.com/vi/hj2Z4PV6aFo/maxresdefault.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>Global Events Expo 2025</h4>
+                                        <p><b>$10</b></p>
+                                        <h3><i class="fa-solid fa-video"></i>online</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="https://xeber100.com/wp-content/uploads/2016/04/5-13.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>International Art Fair</h4>
+                                        <p><b>$20</b></p>
+                                        <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="./img/img-3.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>Entrepreneurs Summit 2025</h4>
+                                        <p><b>$25</b></p>
+                                        <h3><i class="fa-solid fa-video"></i>online</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="./img/img-4.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>World Music & Theater Festival</h4>
+                                        <p><b>$30</b></p>
+                                        <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="item mb-4">
+                                <div class="card border-0 shadow">
+                                    <img src="./img/img-5.jpg" alt="">
+                                    <div class="card-body">
+                                        <h4>International Film Awards Night</h4>
+                                        <p><b>$10</b></p>
+                                        <h3><i class="fa-solid fa-video"></i>online</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="container-fluid my-5">
-                <!-- <h1 class="text-center mb-3">Owl Carousel</h1> -->
-                <div class="row mt-5">
-                    <div class="owl-carousel owl-theme">
-                        <div class="item mb-4">
-                            <div class="card border-0 shadow">
-                                <img src="./img/img-1.jpg" alt="">
-                                <div class="card-body">
-                                    <h4>Global Events Expo 2025</h4>
-                                    <p><b>$10</b></p>
-                                    <h3><i class="fa-solid fa-video"></i>online</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mb-4">
-                            <div class="card border-0 shadow">
-                                <img src="./img/img-2.jpg" alt="">
-                                <div class="card-body">
-                                    <h4>International Art Fair</h4>
-                                    <p><b>$20</b></p>
-                                    <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mb-4">
-                            <div class="card border-0 shadow">
-                                <img src="./img/img-3.jpg" alt="">
-                                <div class="card-body">
-                                    <h4>Entrepreneurs Summit 2025</h4>
-                                    <p><b>$25</b></p>
-                                    <h3><i class="fa-solid fa-video"></i>online</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mb-4">
-                            <div class="card border-0 shadow">
-                                <img src="./img/img-4.jpg" alt="">
-                                <div class="card-body">
-                                    <h4>World Music & Theater Festival</h4>
-                                    <p><b>$30</b></p>
-                                    <h3><i class="fa-solid fa-location-dot"></i>vanue</h3>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="item mb-4">
-                            <div class="card border-0 shadow">
-                                <img src="./img/img-5.jpg" alt="">
-                                <div class="card-body">
-                                    <h4>International Film Awards Night</h4>
-                                    <p><b>$10</b></p>
-                                    <h3><i class="fa-solid fa-video"></i>online</h3>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
     </main>
 
     <footer>

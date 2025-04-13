@@ -88,11 +88,11 @@
                             <form id="event-form">
                                 <div class="mb-3">
                                     <label for="event-name" class="col-form-label text-start d-block">Event Name*</label>
-                                    <input type="text" class="form-control" id="event-name" placeholder="Enter event name">
+                                    <input type="text" class="form-control" id="event-name" placeholder="Enter event name" autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="ticket-price" class="form-label text-start d-block">Ticket Price ($)*</label>
-                                    <input type="number" class="form-control" id="ticket-price" min="0" step="0.01" placeholder="Enter ticket price" required>
+                                    <input type="number" class="form-control" id="ticket-price" min="0" step="0.01" placeholder="Enter ticket price" required autocomplete="off">
                                 </div>
                                 <div class="mb-3">
                                     <label for="categoryFilter" class="col-form-label text-start d-block">Category:</label>
@@ -113,7 +113,7 @@
                                     <label for="eventType" class="col-form-label text-start d-block">Type:</label>
                                     <select class="form-select" id="eventType">
                                         <option value="online">Online Events</option>
-                                        <option value="vanue">Vanue Events</option>
+                                        <option value="venue">Vanue Events</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
@@ -122,7 +122,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="event-image" class="form-label text-start d-block">Event Image</label>
-                                    <input type="text" class="form-control" id="event-image-url" placeholder="Image URL">
+                                    <input type="text" class="form-control" id="event-image-url" placeholder="Image URL" autocomplete="off">
                                     <div class="mt-2">
                                         <img id="previewImage" src="" class="img-fluid rounded d-none" alt="Preview">
                                     </div>

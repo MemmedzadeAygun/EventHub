@@ -103,26 +103,6 @@ setInterval(updateCountDownTime, 1000);
 
 updateCountDownTime();
 
-let countElement = document.querySelector(".count");
-let count = Number(countElement.textContent);
-let plus = document.querySelector(".plus span");
-let minus = document.querySelector(".minus span");
-
-
-let counter = count;
-
-plus.addEventListener('click', () => {
-    counter++;
-    countElement.textContent = counter;
-});
-
-minus.addEventListener('click', () => {
-    counter--;
-    if (counter <= 1) {
-        counter = 1;
-    }
-    countElement.textContent = counter;
-});
 
 const bookNow = document.getElementById('bookNow');
 
@@ -155,6 +135,8 @@ if (loginUser && loginUser.role == "admin") {
 let events = JSON.parse(localStorage.getItem("events"));
 let selectedEventIndex = localStorage.getItem("eventIndex");
 
+let ticketPrice = 0;
+
 if (selectedEventIndex !== null && events[selectedEventIndex]) {
     let event = events[selectedEventIndex];
     document.getElementById("eventTitle").textContent = event.event_name;
@@ -163,7 +145,66 @@ if (selectedEventIndex !== null && events[selectedEventIndex]) {
     document.getElementById('eventImage').src = event.event_image;
     let formatDateTime = event.event_date.replace("T", " ");
     document.getElementById("eventDate").textContent = formatDateTime;
-    document.getElementById("price").textContent = event.ticket_price + " $";
+
+    ticketPrice = Number(event.ticket_price);
+    document.getElementById("price").textContent = ticketPrice + " $";
 } else {
     alert("Melumat tapilmadi");
 }
+
+let countElement = document.querySelector(".count");
+let count = Number(countElement.textContent);
+let plus = document.querySelector(".plus span");
+let minus = document.querySelector(".minus span");
+
+
+let counter = count;
+
+function updatePrice(){
+    const totalPrice = ticketPrice * counter;
+    document.getElementById("price").textContent = totalPrice + " $";
+}
+
+function increaseCounter(){
+    plus.addEventListener('click', () => {
+        counter++;
+        countElement.textContent = counter;
+        updatePrice();
+    });
+}
+
+function decreaseCounter(){
+    minus.addEventListener('click', () => {
+        counter--;
+        if (counter <= 1) {
+            counter = 1;
+        }
+        countElement.textContent = counter;
+        updatePrice();
+    });
+}
+
+increaseCounter();
+decreaseCounter();
+
+function displayBookmarkEventById(){
+    let params = new URLSearchParams(window.location.search);
+    let eventId = Number(params.get('id'));
+    // console.log(eventId);
+    const events = JSON.parse(localStorage.getItem('events')) || [];
+    let existingEvent = events.find(event => event.id === eventId);
+    console.log(existingEvent);
+    if (existingEvent) {
+        document.getElementById("eventTitle").textContent = existingEvent.event_name;
+        document.getElementById("eventCategory").textContent = existingEvent.categoryFilter;
+        document.getElementById("eventType").textContent = existingEvent.eventType;
+        document.getElementById('eventImage').src = existingEvent.event_image;
+        let formatDateTime = existingEvent.event_date.replace("T", " ");
+        document.getElementById("eventDate").textContent = formatDateTime;
+        ticketPrice = Number(existingEvent.ticket_price);
+        document.getElementById("price").textContent = ticketPrice + " $";
+        
+    }
+}
+
+displayBookmarkEventById();

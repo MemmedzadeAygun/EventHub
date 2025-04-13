@@ -251,8 +251,6 @@ body.dark .saved-orders .saved{
 .bookmark-events{
     width: 100%;
     height: auto;
-    /* border: 1px solid black; */
-    display: flex;
     margin-top: 20px;
 }
 .bookmark-event{
@@ -264,6 +262,7 @@ body.dark .saved-orders .saved{
     padding: 20px;
     display: flex;
     gap: 15px;
+    margin-bottom: 15px;
 }
 body.dark .bookmark-event{
     background-color: #1a1d1f;

@@ -85,30 +85,6 @@ logOutIcon.addEventListener('click', () => {
 
 let cards = document.querySelectorAll(".card");
 
-// cards.forEach(card => {
-//     card.addEventListener('click', function () {
-//         const title = card.querySelector('h3').textContent;
-//         const category = card.getAttribute('data-category');
-//         const eventType = card.getAttribute('data-event-type');
-//         const image = card.querySelector('img').getAttribute('src');
-//         const date = card.querySelector('span').textContent;
-//         const price = card.querySelector('p').textContent;
-
-//         const eventData = {
-//             title: title,
-//             category: category,
-//             eventType: eventType,
-//             image: image,
-//             date: date,
-//             price: price
-//         };
-
-//         localStorage.setItem('eventDetails', JSON.stringify(eventData));
-
-//         window.location.href = 'event-details.html';
-//     });
-// });
-
 let loginUser = JSON.parse(localStorage.getItem("users"));
 
 if (loginUser && loginUser.role == "admin") {
@@ -174,7 +150,7 @@ function filterCategory() {
     });
 }
 
-let events = JSON.parse(localStorage.getItem("events"));
+let events = JSON.parse(localStorage.getItem("events")) || [];
 
 
 function createCard(event, index) {
@@ -192,7 +168,6 @@ function createCard(event, index) {
 
     let savedStates = JSON.parse(localStorage.getItem("savedStates")) || {};
 
-    // localStorage-də saxlanmış vəziyyət varsa, onu tətbiq edirik
     if (savedStates[index]) {
         icon.classList.remove("fa-regular");
         icon.classList.add("fa", "fa-bookmark");
@@ -260,7 +235,7 @@ function addCard() {
 
     cardsDiv.innerHTML = "";
 
-    let events = JSON.parse(localStorage.getItem("events"));
+    let events = JSON.parse(localStorage.getItem("events")) || [];
 
     events.forEach((event, index) => {
         let newCard = createCard(event, index);

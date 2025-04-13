@@ -57,8 +57,10 @@ eventForm.addEventListener('submit', (event) => {
 
 function saveEvent(event_name,ticket_price,categoryFilter,eventType,event_date,event_image,index) {
     let events = JSON.parse(localStorage.getItem("events")) || [];
+    const eventId = events.length > 0 ? events[events.length - 1].id + 1 : 1;
 
     let newEvent = {
+        id: eventId,
         event_name: event_name,
         ticket_price: ticket_price,
         categoryFilter: categoryFilter,
@@ -84,7 +86,7 @@ function saveEvent(event_name,ticket_price,categoryFilter,eventType,event_date,e
 }
 
 function showEvents() {
-    let events = JSON.parse(localStorage.getItem("events"));
+    let events = JSON.parse(localStorage.getItem("events")) || [];
     let eventTbody = document.getElementById("event-tbody");
 
     eventTbody.innerHTML = "";
@@ -118,7 +120,7 @@ document.addEventListener("DOMContentLoaded", showEvents);
 
 
 function editEvent(index) {
-    let events = JSON.parse(localStorage.getItem("events"));
+    let events = JSON.parse(localStorage.getItem("events")) || [];
     let event = events[index];
 
     document.getElementById("event-name").value = event.event_name;
@@ -169,7 +171,7 @@ saveChangeButton.addEventListener('click', () => {
 });
 
 function deleteEvent(index) {
-    let events = JSON.parse(localStorage.getItem("events"));
+    let events = JSON.parse(localStorage.getItem("events")) || [];
 
     swal("Are you sure?", {
         buttons: ["Cancel", "OK"],

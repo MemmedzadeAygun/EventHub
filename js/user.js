@@ -92,7 +92,7 @@ function activeSaveOrders() {
 
     saved.classList.add("active");
     bookmark_events.style.display = "block";
-    bookmark_events.style.display = "flex";
+    // bookmark_events.style.display = "flex";
     my_orders.style.display="none";
     saved.style.color="#fff";
     orders.style.color="grey";
@@ -101,7 +101,7 @@ function activeSaveOrders() {
         saved.classList.add("active");
         orders.classList.remove("active");
         bookmark_events.style.display = "block";
-        bookmark_events.style.display = "flex";
+        // bookmark_events.style.display = "flex";
         saved.style.color="#fff";
         orders.style.color="grey";
         my_orders.style.display="none";
@@ -118,3 +118,69 @@ function activeSaveOrders() {
 }
 
 activeSaveOrders();
+
+
+function displayBookmark(){
+    let eventIds = JSON.parse(localStorage.getItem('eventIds')) || [];
+    let events = JSON.parse(localStorage.getItem('events')) || [];
+
+    let bookmarkEvents = events.filter(event => eventIds.includes(event.id));
+
+    let container = document.querySelector('.bookmark-events');
+
+    if (container) {
+        container.innerHTML = "";
+
+        bookmarkEvents.forEach(bookmarkEvent => {
+            let bookmark_event = document.createElement('div');
+            bookmark_event.classList.add('bookmark-event');
+
+            let bookmark_event_image = document.createElement('div');
+            bookmark_event_image.classList.add('bookmark-event-image');
+
+            let image = document.createElement('img');
+            image.src = bookmarkEvent.event_image;
+
+            let bookmark_event_detail = document.createElement('div');
+            bookmark_event_detail.classList.add('bookmark-event-detail');
+
+            let eventName = document.createElement('h4');
+            eventName.textContent = bookmarkEvent.event_name;
+
+            let eventDate = document.createElement('p');
+            eventDate.textContent = bookmarkEvent.event_date;
+
+            let detail_icon = document.createElement('div');
+            detail_icon.classList.add('detail-icon');
+
+            let icon = document.createElement('i');
+            icon.classList.add('fa-solid','fa-eye');
+
+            let iconDetail = document.createElement('a');
+            iconDetail.textContent = "View";
+
+            iconDetail.addEventListener('click', (e) => {
+                e.preventDefault();
+               window.location.href = `event-details.html?id=${bookmarkEvent.id}`;
+                
+            })
+            
+
+            bookmark_event.appendChild(bookmark_event_image);
+            bookmark_event.appendChild(bookmark_event_detail);
+            bookmark_event_image.appendChild(image);
+
+            bookmark_event_detail.appendChild(eventName);
+            bookmark_event_detail.appendChild(eventDate);
+            bookmark_event_detail.appendChild(detail_icon);
+
+            detail_icon.appendChild(icon);
+            detail_icon.appendChild(iconDetail);
+
+            container.appendChild(bookmark_event);
+        });
+    }
+
+}
+
+displayBookmark();

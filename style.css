@@ -46,7 +46,23 @@ body.dark header{
     width: 100%;
     height: 100%;
 }
-
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages ul li{
+    list-style-type: none;
+    margin-top: 15px;
+} 
+.pages ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+body.dark .pages ul li a{
+    color: #ccc;
+}
 .profile{
     width: 55px;
     height: 55px;
@@ -107,7 +123,7 @@ body.dark .sub-menu{
 }
 .user-details{
     display: flex;
-    gap: 60px;
+    gap: 25px;
 }
 .admin-button{
     width: 120px;
@@ -190,7 +206,7 @@ body.dark main{
     background-color: #242526;
 }
 
-@keyframes changeBg {
+/* @keyframes changeBg {
     0%{background-image: url(./img/festifal3.jpg);}
     33%{background-image: url(./img/img-1.jpg);}
     66%{background-image: url(./img/img-2.jpg);}
@@ -199,7 +215,6 @@ body.dark main{
 .part1{
     width: 100%;
     height: 270px;
-    /* background-color: #7413dc; */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -208,37 +223,95 @@ body.dark main{
     opacity: 0.9;
     padding-top: 120px;
     animation: changeBg 6s infinite;
+} */
+#bgCarousel {
+    position: relative;
+    width: 100%;
+    height: 470px; /* Hündürlük */
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
 }
-.sub-part1{
-    width: 50%;
-    /* border: 1px solid black; */
-    margin: auto;
+
+#bgCarousel .carousel-inner {
+    width: 100%;
+    height: 100%;
+}
+
+#bgCarousel .carousel-item {
+    width: 100%;
+    height: 100%;
+}
+
+#bgCarousel .carousel-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    object-position: center;
+}
+.part1-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 70%;
+    padding-top: 120px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+    /* background-color: rgba(0, 0, 0, 0.3);  */
 }
-.sub-part1 select{
+
+.sub-part1 {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.sub-part1 select {
     width: 260px;
+    height: 50px;
+    padding: 0 15px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    appearance: none; 
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20fill%3D%22%23333%22%20height%3D%2220%22%20viewBox%3D%220%200%2024%2024%22%20width%3D%2220%22%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%3E%3Cpath%20d%3D%22M7%2010l5%205%205-5z%22/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 20px;
+    cursor: pointer;
     border: none;
     outline: none;
-    height: 50px;
-    padding: 10px;
-    padding-right: 20px;
-    font-size: 16px;
 }
-body.dark .sub-part1 select{
+body.dark .sub-part1 select {
     background-color: #242526;
     color: #ccc;
+    border: 1px solid #444;
 }
-.sub-part1 button{
+
+.sub-part1 button {
     width: 110px;
     height: 50px;
-
+    background-color: #c20d8d;
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
 }
 
-select option{
+select option {
     padding: 10px;
-    line-height: 2.5;
     font-size: 16px;
+}
+.carousel-item {
+    transition: transform 1s ease-in-out !important;
 }
 
 .btn1{
@@ -291,17 +364,15 @@ body.dark .category p{
     width: 85%;
     margin: auto;
     margin-top: 100px;
-    /* border: 1px solid black; */
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    gap: 27px;
 }
 .card{
     width: 350px;
     height: 400px;
     background-color: white;
-    /* border: 1px solid black; */
-    margin-bottom: 30px;
+    margin-bottom: 10px;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     transition: transform 0.3s ease;
@@ -337,9 +408,10 @@ body.dark .card{
    color: #fff;
 }
 .card-content h3,p{
-    height: 45px;
+    height: 20px;
     padding: 10px;
     transition: color 0.3s ease-in-out;
+    font-size: 17px;
 }
 body.dark .card-content p{
     color: #fff;
@@ -384,7 +456,7 @@ body.dark footer{
     color: #fff;
     font-size: 20px;
     font-weight: 400;
-    padding-left: 10px;
+    padding-left: 40px;
 }
 
 .company li{
@@ -433,21 +505,27 @@ body.dark footer{
 }
 
 @media(min-width:1200px){
+    .user-info h3{
+        font-size: 22px;
+    }
     .sub-part1{
         width: 670px;
     }
     .categories{
-        width: 1068px;
+        width: 1225px;
     }
     .cards{
-        width: 1068px;
+        width: 1225px;
     }
     .card{
-        width: 338px;
-        height: 384px;
+        width: 286px;
+        height: 356px;
     }
     .sub-footer{
-        width: 1068px;
+        width: 1225px;
+    }
+    .company h3{
+        padding-left: 40px;
     }
 }
 
@@ -483,30 +561,34 @@ body.dark footer{
         width: 510px;
     }
     .sub-part1 select{
-        width: 184px;
-        height: 40px;
+        width: 190px;
+        height: 44px;
         font-size: 14px;
     }
     .sub-part1 button{
-        height: 40px;
+        height: 44px;
     }
     .categories{
-        width: 720px;
+        width: 750px;
         gap: 20px;
     }
     .category p{
         font-size: 13px;
     }
+    .part1-overlay {
+        height: 80%;
+    }
     .cards{
-        width: 720px;
+        width: 750px;
         margin-top: 80px;
+        justify-content: space-between;
     }
     .card{
         width: 230px;
         height: 310px;
     }
     .card-content h3{
-        height: 27px;
+        height: 20px;
         font-size: 16px;
     }
     .sub-footer{
@@ -528,38 +610,41 @@ body.dark footer{
 }
 @media((min-width:601px) and (max-width:767px)){
     .sub-part1{
-        width: 370px;
+        width: 453px;
     }
     .sub-part1 select{
-        width: 140px;
+        width: 178px;
         height: 40px;
     }
     .sub-part1 button{
-        width: 67px;
+        width: 76px;
         height: 40px;
     }
     .categories{
-        width: 510px;
+        width: 610px;
         margin-top: 70px;
         gap: 20px;
+    }
+    .part1-overlay {
+        height: 90%;
     }
     .category p{
         font-size: 13px;
     }
     .cards{
-        width: 510px;
+        width: 605px;
         margin-top: 70px;
     }
     .card{
-        width: 245px;
-        height: 310px;
+        width: 284px;
+        height: 343px;
     }
     .card-content h3{
         height: 27px;
         font-size: 16px;
     }
     .sub-footer{
-        width: 510px;
+        width: 640px;
     }
     .company h3{
         font-size: 18px;
