@@ -152,9 +152,11 @@ let saveChangeButton = document.getElementById("saveButton");
 saveChangeButton.addEventListener('click', () => {
     let index = saveChangeButton.getAttribute("data-index");
     let events = JSON.parse(localStorage.getItem("events"));
+    const eventId = events.length > 0 ? events[events.length - 1].id + 1 : 1;
 
 
     events[index] = {
+        id: eventId,
         event_name: document.getElementById("event-name").value,
         ticket_price: document.getElementById("ticket-price").value,
         categoryFilter: document.getElementById("categoryFilter").value,
