@@ -47,7 +47,7 @@ body.dark .header{
 .header p{
     margin-top: 10px;
 }
-.header p a{
+.header a{
     color: #fff;
     font-size: 16px;
     text-decoration: none;
