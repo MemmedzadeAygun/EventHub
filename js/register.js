@@ -9,14 +9,14 @@ registerForm.addEventListener("submit", (event) => {
 
     let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    let userExist = users.find(user => {
-        return user.username === username;
-    });
+    // let userExist = users.find(user => {
+    //     return user.username === username;
+    // });
 
-    if (userExist) {
-        alert("User exists");
-        return;
-    }
+    // if (userExist) {
+    //     alert("User exists");
+    //     return;
+    // }
 
     let role=username==="admin"? "admin":"user";
     // if (username==="admin") {
@@ -27,13 +27,15 @@ registerForm.addEventListener("submit", (event) => {
     //     role=null
     // }
 
-    const newUser = {
+    let newUser = {
         name: name,
         surname:surname,
         username: username,
         password: password,
         role:role
     };
+
+    // localStorage.removeItem("users");
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));

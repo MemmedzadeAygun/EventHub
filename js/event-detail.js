@@ -35,7 +35,7 @@ modeToggle.addEventListener("click", () => {
     }
 });
 
-const user = localStorage.getItem("users");
+const user = localStorage.getItem("currentUser");
 const logOutIcon = document.getElementById("logOut");
 const signOutText = document.getElementById("sign-out-text");
 const userAccount = document.getElementById("userAccount");
@@ -53,7 +53,7 @@ if (user) {
 }
 
 logOutIcon.addEventListener('click', () => {
-    localStorage.removeItem("users");
+    localStorage.removeItem("currentUser");
     window.location.href = "login.html";
 });
 
@@ -110,7 +110,7 @@ bookNow.addEventListener('click', () => {
     window.location.href = 'order-confirm.html';
 });
 
-let loginUser = JSON.parse(localStorage.getItem("users"));
+let loginUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (loginUser && loginUser.role == "admin") {
     let header = document.querySelector(".admin-button");

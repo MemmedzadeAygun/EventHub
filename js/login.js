@@ -12,7 +12,7 @@ form.addEventListener("submit",(event)=>{
 
     if (user) {
         if (user.password===password) {
-            localStorage.setItem("users",JSON.stringify(user));
+            localStorage.setItem("currentUser",JSON.stringify(user));
             user.role=="user"? window.location.href="index.html": window.location.href="admin.html";
         }else{
             alert("Incorrect password");

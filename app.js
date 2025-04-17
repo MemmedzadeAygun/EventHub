@@ -67,7 +67,7 @@ function filterCategoryAndType() {
 
 
 
-let user = localStorage.getItem("users");
+let user = localStorage.getItem("currentUser");
 let logOutIcon = document.getElementById("logOut");
 let signOutText = document.getElementById("sign-out-text");
 if (user) {
@@ -79,13 +79,13 @@ if (user) {
 }
 
 logOutIcon.addEventListener('click', () => {
-    localStorage.removeItem("users");
+    localStorage.removeItem("currentUser");
     window.location.href = "login.html";
 });
 
 let cards = document.querySelectorAll(".card");
 
-let loginUser = JSON.parse(localStorage.getItem("users"));
+let loginUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (loginUser && loginUser.role == "admin") {
     let header = document.querySelector(".admin-button");

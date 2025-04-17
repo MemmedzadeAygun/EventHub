@@ -35,7 +35,7 @@ modeToggle.addEventListener("click", () => {
     }
 });
 
-const user = localStorage.getItem("users");
+const user = localStorage.getItem("currentUser");
 const logOutIcon = document.getElementById("logOut");
 const signOutText = document.getElementById("sign-out-text");
 const userAccount = document.getElementById("userAccount");
@@ -49,11 +49,11 @@ if (user) {
 }
 
 logOutIcon.addEventListener('click', () => {
-    localStorage.removeItem("users");
+    localStorage.removeItem("currentUser");
     window.location.href = "login.html";
 });
 
-let loginUser = JSON.parse(localStorage.getItem("users"));
+let loginUser = JSON.parse(localStorage.getItem("currentUser"));
 
 if (loginUser && loginUser.role == "admin") {
     let header = document.querySelector(".admin-button");
@@ -78,7 +78,7 @@ if (loginUser && loginUser.role == "admin") {
 let name = document.getElementById('name');
 let surname = document.getElementById('surname');
 
-let parseUser = JSON.parse(localStorage.getItem('users'));
+let parseUser = JSON.parse(localStorage.getItem('currentUser'));
 name.textContent = parseUser.name;
 surname.textContent = parseUser.surname;
 document.getElementById('description').textContent += ` ${parseUser.name} ${parseUser.surname}`;
