@@ -87,9 +87,10 @@ let cards = document.querySelectorAll(".card");
 
 let loginUser = JSON.parse(localStorage.getItem("currentUser"));
 
+let header = document.querySelector(".admin-button");
 if (loginUser && loginUser.role == "admin") {
-    let header = document.querySelector(".admin-button");
 
+    header.style.display = "block";
     let adminButton = document.createElement("button");
     adminButton.textContent = "Admin Page";
     adminButton.style.width = "100%";
@@ -115,7 +116,9 @@ if (loginUser && loginUser.role == "admin") {
     }
 
     updateFontSize();
-};
+}else{
+    header.style.display = "none";
+}
 
 function filterCategory() {
     let categories = document.querySelectorAll(".category");

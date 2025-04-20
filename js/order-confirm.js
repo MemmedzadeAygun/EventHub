@@ -56,9 +56,10 @@ logOutIcon.addEventListener('click', () => {
 
 let loginUser = JSON.parse(localStorage.getItem("users"));
 
+let header = document.querySelector(".admin-button");
 if (loginUser.role == "admin") {
-    let header = document.querySelector(".admin-button");
 
+    header.style.display = "block";
     let adminButton = document.createElement("button");
     adminButton.textContent = "Admin Page";
     adminButton.style.width = "100%";
@@ -74,7 +75,9 @@ if (loginUser.role == "admin") {
     });
 
     header.appendChild(adminButton);
-};
+}else{
+    header.style.display = "none";
+}
 
 function confirm() {
     const confirmButton = document.querySelector(".confirm");

@@ -39,6 +39,7 @@ registerForm.addEventListener("submit", (event) => {
 
     users.push(newUser);
     localStorage.setItem("users", JSON.stringify(users));
+    // localStorage.removeItem("users");
     swal("Success!", "You clicked the button!", "success")
     .then(()=>{
         window.location.href = "login.html";

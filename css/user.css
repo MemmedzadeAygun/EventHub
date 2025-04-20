@@ -53,6 +53,23 @@ body.dark .part_2_1{
     background-color: #1a1d1f;
     border: none;
 }
+.pages{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pages ul li{
+    list-style-type: none;
+    margin-top: 0px;
+} 
+.pages ul li a{
+    color: black;
+    text-decoration: none;
+    font-size: 16px;
+}
+body.dark .pages ul li a{
+    color: #ccc;
+}
 .my-profile{
     width: 135px;
     height: 135px;

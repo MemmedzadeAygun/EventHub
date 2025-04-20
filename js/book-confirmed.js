@@ -55,8 +55,10 @@ logOutIcon.addEventListener('click', () => {
 
 let loginUser = JSON.parse(localStorage.getItem("users"));
 
+let header = document.querySelector(".admin-button");
 if (loginUser && loginUser.role == "admin") {
-    let header = document.querySelector(".admin-button");
+
+    header.style.display = "block";
 
     let adminButton = document.createElement("button");
     adminButton.textContent = "Admin Page";
@@ -73,18 +75,20 @@ if (loginUser && loginUser.role == "admin") {
     });
 
     header.appendChild(adminButton);
-};
+}else{
+    header.style.display = "none";
+}
 
 let events=JSON.parse(localStorage.getItem("events"));
 let selectedEventIndex=localStorage.getItem("eventIndex");
-let users=JSON.parse(localStorage.getItem("users"));
+let currentUser=JSON.parse(localStorage.getItem("currentUser"));
 
 if (selectedEventIndex !== null && events[selectedEventIndex]) {
     let event = events[selectedEventIndex];
     document.getElementById("confirmed-img").src=event.event_image;
     document.getElementById("event-name").textContent=event.event_name;
-    document.getElementById("username").textContent=users.name;
-    document.getElementById("usersurname").textContent=users.surname; 
+    document.getElementById("username").textContent=currentUser.name;
+    document.getElementById("usersurname").textContent=currentUser.surname; 
     let formatDateTime=event.event_date.replace("T"," ");
     document.getElementById("event-date").textContent=formatDateTime;
     document.getElementById("price").textContent=event.ticket_price + "$";
